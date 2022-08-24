@@ -3,7 +3,7 @@ public class Book {
     Author author; //автор книги
     int yearOfPublication; //год публикации
 
-    public Book (String nameOfBook, Author author, int yearOfPublication){
+    public Book(String nameOfBook, Author author, int yearOfPublication) {
         this.nameOfBook = nameOfBook;
         this.author = author;
         this.yearOfPublication = yearOfPublication;
