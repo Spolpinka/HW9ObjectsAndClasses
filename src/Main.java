@@ -24,6 +24,16 @@ public class Main {
         //меняем год публикации по названию и печатаем книгу для проверки работы соответствующего метода
         lib.changeYearForNameOfBook(guardians.nameOfBook, 2000);
         lib.toPrintForNameOfBook(guardians.nameOfBook);
+        System.out.println("--------------------");
+        //печатаем переопределенным методом toString()
+        System.out.println(guardians);
+        System.out.println(author1);
+        //проверяем работу переопределенного метода equals()
+        System.out.println(author1.equals(author2));
+        System.out.println(harryPotter.equals(harryPotter));
+        //проверяем работу переопределенного метода hashCode
+        System.out.println("Сравниваем автора 1 и автора 2 через hashCode :" + (author1.hashCode() == author2.hashCode()));
+        System.out.println("Сравниваем книгу 1 и книгу 1 через hashCode :" + (guardians.hashCode() == guardians.hashCode()));
 
     }
 

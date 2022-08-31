@@ -32,4 +32,23 @@ public class Book {
     public String getNameOfBook() {
         return nameOfBook;
     }
+    @Override
+    public String toString (){
+        return this.author.toString() + ":" + this.getNameOfBook() + ":" + this.getYearOfPublication();
+    }
+    public boolean equals(Book book){
+        if (this == book) return true;
+        if (book == null || getClass() != book.getClass()) return false;
+        Book book1 = (Book) book;
+        return (getNameOfBook() == book1.getNameOfBook()) &&
+                (getAuthor().equals(book1.getAuthor())) &&
+                (getYearOfPublication() == book.getYearOfPublication());
+    }
+@Override
+    public int hashCode (){
+        int result = nameOfBook == null ? 0 : nameOfBook.hashCode();
+        result = result * 31 + (author == null ? 0 : author.hashCode());
+        result = result * 31 + (yearOfPublication);
+        return result;
+    }
 }

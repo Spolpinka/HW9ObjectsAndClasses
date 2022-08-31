@@ -5,14 +5,13 @@ public class Library {
         this.books = new Book[size];
     }
 
-    Book[] addBook(Book newBook) {
+    void addBook(Book newBook) {
         for (int i = 0; i < books.length; i++) {
             if (books[i] == null) {
                 books[i] = newBook;
                 break;
             }
         }
-        return books;
     }
 
     void toPrint() {
